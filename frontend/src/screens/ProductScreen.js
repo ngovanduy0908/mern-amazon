@@ -10,6 +10,9 @@ import Button from 'react-bootstrap/Button';
 import Rating from '../components/Rating';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from '../utils';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -58,7 +61,7 @@ const ProductScreen = () => {
       } catch (error) {
         dispatch({
           type: 'FETCH_FAIL',
-          payload: error.message,
+          payload: getError(error),
         });
       }
       // setProducts(result.data);
@@ -67,9 +70,9 @@ const ProductScreen = () => {
   }, [slug]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
