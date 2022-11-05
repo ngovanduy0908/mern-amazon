@@ -13,7 +13,7 @@ import { Store } from './Store';
 function App() {
   const { state } = useContext(Store);
   const { cart } = state;
-  console.log(state);
+  console.log(cart.cartItems);
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
@@ -28,7 +28,7 @@ function App() {
                   Cart
                   {cart.cartItems.length > 0 && (
                     <Badge pill bg="danger">
-                      {cart.cartItems.length}
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </Badge>
                   )}
                 </Link>
