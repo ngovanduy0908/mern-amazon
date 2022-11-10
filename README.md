@@ -310,3 +310,7 @@ $ npm start
     1. add images to product model
     2. get images in edit screen
     3. show images in product screen
+
+Go to dashboard of developer.paypal.com
+Choose My Apps & Credentials
+Choose Sandbox and click Create App
