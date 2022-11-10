@@ -1,0 +1,21 @@
+{
+  "name": "amazon",
+  "version": "1.0.0",
+  "description": "![amazona](/frontend/public/images/amazona.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngovanduy0908/mern-amazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngovanduy0908/mern-amazon/issues"
+  },
+  "homepage": "https://github.com/ngovanduy0908/mern-amazon#readme"
+}
